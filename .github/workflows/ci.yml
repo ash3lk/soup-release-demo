@@ -40,3 +40,15 @@ jobs:
           name: distributions
           path: dist/
       - run: python scripts/check_wheel.py dist
+
+  docker-smoke:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: distributions
+          path: dist/
+      - run: docker build -t soup-demo-ci .
+      - run: docker run --rm --network none soup-demo-ci
