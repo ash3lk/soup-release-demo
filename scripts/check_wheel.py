@@ -5,7 +5,6 @@ import tempfile
 import venv
 from pathlib import Path
 
-
 wheel_dir = Path(sys.argv[1]).resolve()
 wheels = list(wheel_dir.glob("*.whl"))
 if len(wheels) != 1:
