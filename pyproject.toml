@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "soup-release-demo-shlyapik"
 version = "0.9.3"
 requires-python = ">=3.10"
+dependencies = ["colorama==0.4.6"]
 
 [project.scripts]
 soup-demo = "soup_demo.cli:main"
@@ -16,3 +17,6 @@ namespaces = false
 
 [tool.setuptools.package-data]
 soup_demo = ["data/defaults.json"]
+
+[project.optional-dependencies]
+dev = ["colorama==0.4.6"]
