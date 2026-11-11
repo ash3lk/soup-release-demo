@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soup-release-demo-shlyapik"
+version = "0.9.3"
+requires-python = ">=3.10"
+
+[project.scripts]
+soup-demo = "soup_demo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
