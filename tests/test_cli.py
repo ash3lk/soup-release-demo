@@ -8,6 +8,7 @@ class CliTests(unittest.TestCase):
         result = subprocess.run(
             ["soup-demo", "hello"],
             env={**os.environ, "LOGNAME": "ci-user"},
+            check=False,
             capture_output=True,
             text=True,
         )
@@ -18,6 +19,7 @@ class CliTests(unittest.TestCase):
     def test_show_config(self):
         result = subprocess.run(
             ["soup-demo", "show-config"],
+            check=False,
             capture_output=True,
             text=True,
         )
