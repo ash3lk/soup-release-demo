@@ -14,5 +14,3 @@ soup-demo = "soup_demo.cli:main"
 where = ["src"]
 namespaces = false
 
-[tool.setuptools.package-data]
-soup_demo = ["data/defaults.json"]
